@@ -7,7 +7,7 @@ Most importantly, the US Federal Government is actively limiting the scope of pr
 ### Data
 The data I use in this project comes from a [Buzzfeed News aarticle](https://github.com/BuzzFeedNews/2016-04-federal-surveillance-planes) in 2015. They cross-referenced flight data from https://www.flightradar24.com/ and the Federal Aviation Administration's [aircraft registration database](https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/releasable_aircraft_download/) to compose a four month long dataset on all the flight data from planes owned or associated with the Department of Homeland Security (DHS) and the Federal Bureau of Investigation (FBI).  
 While it was a relatively clean dataset (23 columns and 1.2 million rows) a lot of the information was extraneous or derived from other columns - I was able to cut it down to these 13: 
-adshex,flight_id,latitude,longitude,altitude,speed,track,timestamp,name,n_number,mfr,model,agency 
+`adshex,flight_id,latitude,longitude,altitude,speed,track,timestamp,name,n_number,mfr,model,agency` 
 The biggest struggle I had with datatypes was with the timestamp type; in the end I split it up into a 'month', 'day', and 'time' column for easier access. 
 ### Methodology
 #### Heatmap
